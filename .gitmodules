@@ -1,0 +1,3 @@
+[submodule "u96v2_mobilenetv2_customcoco"]
+	path = u96v2_mobilenetv2_customcoco
+	url = https://github.com/wwMark/u96v2_mobilenetv2_customcoco.git
