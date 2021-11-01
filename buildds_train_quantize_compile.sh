@@ -1,7 +1,8 @@
 set -e
 trap "docker stop vitis_ai_quantize_compile" ERR
 
-python u96v2_mobilenetv2_customcoco/coco_processor
+python u96v2_mobilenetv2_customcoco/coco_processor.py
+(cd u96v2_mobilenetv2_customcoco/coco2014_cropped_images && tfds build coco2014_cropped_images)
 python u96v2_mobilenetv2_customcoco/mobilenet_v2_trainer.py
 
 docker pull xilinx/vitis-ai:1.3.411
